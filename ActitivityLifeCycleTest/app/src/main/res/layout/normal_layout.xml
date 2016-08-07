@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:anddorid="http://schemas.android.com/apk/res/android"
+    anddorid:layout_width="match_parent"
+    anddorid:layout_height="match_parent"
+    anddorid:orientation="vertical">
+
+    <TextView
+        anddorid:layout_width="match_parent"
+        anddorid:layout_height="wrap_content"
+        anddorid:text="This is a normal activity"/>
+</LinearLayout>
