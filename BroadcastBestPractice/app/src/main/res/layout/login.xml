@@ -27,6 +27,16 @@
     </TableRow>
 
     <TableRow>
+        <CheckBox
+            android:id="@+id/remeber_pass"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="Remeber password"/>
+    </TableRow>
+
+    <TableRow>
         <Button
             android:id="@+id/login"
             android:layout_height="wrap_content"
