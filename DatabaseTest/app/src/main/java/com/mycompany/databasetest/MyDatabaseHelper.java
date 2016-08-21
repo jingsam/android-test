@@ -14,7 +14,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             + "author text, "
             + "price real, "
             + "pages integer, "
-            + "name text)";
+            + "name text,"
+            + "category_id integer)";
 
     public static final String CREATE_CATEGORY = "create table Category ("
             + "id integer primary key autoincrement, "
@@ -35,8 +36,12 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("drop table if exists Book");
-        sqLiteDatabase.execSQL("drop table if exists Category");
-        onCreate(sqLiteDatabase);
+        switch (i) {
+            case 1:
+                sqLiteDatabase.execSQL(CREATE_CATEGORY);
+            case 2:
+                sqLiteDatabase.execSQL("alter table Book add column category_id integer");
+            default:
+        }
     }
 }

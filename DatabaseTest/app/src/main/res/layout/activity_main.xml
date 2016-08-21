@@ -29,8 +29,14 @@
         android:text="Delete data"/>
 
     <Button
-        android:id="@+id/query_data"
+    android:id="@+id/query_data"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Query data"/>
+
+    <Button
+        android:id="@+id/replace_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Query data"/>
+        android:text="Replace data"/>
 </LinearLayout>
